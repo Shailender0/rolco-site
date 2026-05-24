@@ -134,7 +134,8 @@
       background-repeat: no-repeat;
       background-size: cover;
       padding-left: 261px;
-      height: 731px;
+      padding-right: 8rem;
+      height: 550px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -1321,17 +1322,18 @@ ease-in-out alternate;" href="#"
   <!-- Brand section  end -->
 
   <!-- about section -->
-  <div class="w-custom mx-auto ">
+  <!-- <div class="w-custom mx-auto ">
     <img class="image-fulid mx-auto" src="./images/Group 91.png" alt="" />
-  </div>
+  </div> -->
 
-  <!-- <section class="about-section">
+
+   <section class="w-custom mx-auto mt-4">
     <div class="about-inner">
       <div class="image-card slide-from-left">
         <img src="./images/rolco-buliding.png" alt="Ralco Office Building" />
       </div>
 
-      <div style="background-image: url(./images/about-rigt-img-bg.png)" class="text-card slide-from-right">
+      <div style="background-image: url(./images/bg.png)" class="text-card slide-from-right">
         <h2>
           About
           <span style="font-style: italic; font-family: Segoe Print" class="ralco-italic">Ralco</span>
@@ -1359,43 +1361,7 @@ ease-in-out alternate;" href="#"
         </p>
       </div>
     </div>
-  </section> -->
-
-  <!-- <section class="w-custom mx-auto ">
-    <div class="about-inner">
-      <div class="image-card slide-from-left">
-        <img src="./images/rolco-buliding.png" alt="Ralco Office Building" />
-      </div>
-
-      <div style="background-image: url(./images/about-rigt-img-bg.png)" class="text-card slide-from-right">
-        <h2>
-          About
-          <span style="font-style: italic; font-family: Segoe Print" class="ralco-italic">Ralco</span>
-        </h2>
-
-        <p>
-          Founded in 1994, Ralco Synergy Private Ltd. has grown from a single
-          office in Bangalore to seven locations across India, backed by a
-          team of 150+ professionals.
-        </p>
-
-        <p>
-          We are a trusted provider of IT hardware (rental &amp; purchase),
-          software license reselling, and electronic &amp; electrical
-          components–including desktops, laptops &amp; servers, Cisco &amp;
-          networking devices, IoT &amp; R&amp;D components, and 50+ software
-          licenses–backed by competitive pricing, a global supplier network,
-          and timely deliveries across industries nationwide.
-        </p>
-
-        <p>
-          Our experienced team is committed to helping you find the right
-          solutions, backed by quality products &amp; exceptional service that
-          keep your business running smoothly.
-        </p>
-      </div>
-    </div>
-  </section> -->
+  </section> 
   <script>
     const observer = new IntersectionObserver(
       (entries) => {
@@ -2201,7 +2167,7 @@ ease-in-out alternate;" href="#"
       }
     }
 
-    .rv3-logo:nth-child(1) {
+    /* .rv3-logo:nth-child(1) {
       top: 17%;
       left: 0;
       transform: translate(-50%, 0);
@@ -2251,8 +2217,60 @@ ease-in-out alternate;" href="#"
       top: 10%;
       left: 4%;
       animation: rv3f 3.1s ease-in-out infinite 0.7s
-    }
+    } */
 
+
+  .rv3-logo:nth-child(1) {
+    top: 0;
+    left: 35%;
+    transform: translate(-50%, 0);
+    animation: rv3f 3.3s ease-in-out infinite 0s
+  }
+
+  .rv3-logo:nth-child(2) {
+    top: 7%;
+    right: 0%;
+    animation: rv3f 3.7s ease-in-out infinite 0.4s
+  }
+
+  .rv3-logo:nth-child(3) {
+    top: 39%;
+    left: 71%;
+    transform: translateY(-50%);
+    animation: rv3f 3.0s ease-in-out infinite 0.8s
+  }
+
+  .rv3-logo:nth-child(4) {
+    top: 68%;
+    right: 4%;
+    animation: rv3f 3.5s ease-in-out infinite 0.2s
+  }
+
+  .rv3-logo:nth-child(5) {
+    bottom: -7%;
+    left: 35%;
+    transform: translate(-50%, 0);
+    animation: rv3f 3.2s ease-in-out infinite 0.6s
+  }
+
+  .rv3-logo:nth-child(6) {
+    bottom: 2%;
+    left: 4%;
+    animation: rv3f 2.9s ease-in-out infinite 1.0s
+  }
+
+  .rv3-logo:nth-child(7) {
+    top: 42%;
+    left: 0;
+    transform: translateY(-50%);
+    animation: rv3f 3.6s ease-in-out infinite 0.3s
+  }
+
+  .rv3-logo:nth-child(8) {
+    top: 10%;
+    left: 0%;
+    animation: rv3f 3.1s ease-in-out infinite 0.7s
+  }
     .rv3-right {
       flex: 1;
       min-width: 260px;
@@ -2430,6 +2448,8 @@ ease-in-out alternate;" href="#"
       <div class="rv3-logo"><img src="./images/client-5.svg" alt="Logo 5" /></div>
       <div class="rv3-logo"><img src="./images/client-6.svg" alt="Logo 6" /></div>
       <div class="rv3-logo"><img src="./images/client-7.svg" alt="Logo 7" /></div>
+      <div class="rv3-logo"><img src="./images/client-8.svg" alt="Logo 7" /></div>
+
       <div class="rv3-center"><img src="./images/Ralco_MasterLogo.png" alt="Brand logo" /></div>
     </div>
 
