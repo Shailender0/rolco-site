@@ -18,6 +18,10 @@
     body {
       font-family: "Montserrat", Courier, monospace !important;
     }
+
+    .w-custom {
+      max-width: 92rem;
+    }
   </style>
   <style>
     /* body {
@@ -113,7 +117,7 @@
     .about-inner {
       position: relative;
       width: 100%;
-      max-width: 1100px;
+      /* max-width: 1400px; */
       display: flex;
       align-items: center;
     }
@@ -126,20 +130,15 @@
       position: relative;
       z-index: 1;
       margin-left: 210px;
-      /* shift right so image sits on top of its left edge */
       width: 100%;
-      background: linear-gradient(135deg,
-          #c8e0f9 0%,
-          #d9ecfd 20%,
-          #e8f4fe 50%,
-          #f2f8ff 80%,
-          #ffffff 100%);
-      border-radius: 28px;
-      /* large left padding so text starts after the image overlap zone */
-      padding: 52px 56px 52px 195px;
-      box-shadow:
-        0 8px 48px rgba(100, 160, 230, 0.12),
-        0 2px 10px rgba(0, 0, 0, 0.05);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding-left: 261px;
+      height: 731px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
     }
 
     .text-card h2 {
@@ -174,10 +173,10 @@
       position: absolute;
       left: 0;
       top: 50%;
-      transform: translateY(-50%) rotate(-2.5deg);
+      transform: translateY(-50%) rotate(0deg);
       z-index: 2;
-      width: 340px;
-      height: 370px;
+      /* width: 340px; */
+      height: 400px;
       /* background: #ffffff;
         border-radius: 24px;
         padding: 10px;
@@ -281,25 +280,14 @@
     }
   </style>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Nunito", sans-serif;
-      background: #eef4fb;
-    }
-
     /* ── Section background: light blue ── */
     .stats-section {
-      background-color: #a8cff0;
-      width: 100%;
+      background: linear-gradient(180deg, #102D4D 0%, #2469B3 100%);
+      border-radius: 49px;
       padding: 64px 60px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
       min-height: 360px;
     }
 
@@ -314,7 +302,7 @@
     /* ── Left text block ── */
     .left-text {
       flex: 0 0 auto;
-      width: 300px;
+      width: 40%;
       opacity: 0;
       transform: translateX(-60px);
       transition:
@@ -328,22 +316,22 @@
     }
 
     .left-text .subtitle {
-      font-size: 1.25rem;
+      font-size: 2.25rem;
       font-weight: 600;
-      color: #1e3a5f;
+      color: #fff;
       margin-bottom: 12px;
       letter-spacing: 0.01em;
     }
 
     .left-text h2 {
-      font-size: 2.85rem;
+      font-size: 3.25rem;
       font-weight: 900;
-      color: #0f2744;
+      color: #fff;
       line-height: 1.13;
     }
 
     /* ── Right stats grid ── */
-    .stats-grid {
+    /* .stats-grid {
       flex: 1;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -358,7 +346,7 @@
     .stats-grid.visible {
       opacity: 1;
       transform: translateX(0);
-    }
+    } */
 
     /* ── Stat card ── */
     .stat-card {
@@ -420,10 +408,10 @@
         padding: 40px 20px;
       }
 
-      .stats-grid {
+      /* .stats-grid {
         grid-template-columns: 1fr 1fr;
         gap: 12px;
-      }
+      } */
 
       .stat-card {
         padding: 20px 18px;
@@ -496,6 +484,28 @@
       position: relative;
       z-index: 2;
     }
+
+    .content-layer>div {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .content-layer h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .service-front>div {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .service-front h3 {
+      margin-bottom: 0.5rem;
+    }
   </style>
   <style>
     .brand-marquee {
@@ -504,7 +514,8 @@
       margin-inline: auto;
       border-radius: 24px;
       overflow: hidden;
-      background: #fff;
+      background: #FFF3;
+      backdrop-filter: blur(25px);
       position: relative;
       padding: 10px 0;
     }
@@ -517,10 +528,10 @@
     }
 
     .brand-track img {
-      width: 180px;
-      height: 90px;
+      width: 90px;
+      height: 50px;
       object-fit: contain;
-      margin: 0 40px;
+      margin: 0 35px;
       transition: all 0.35s ease;
 
       /* Muted Black & White Effect */
@@ -572,7 +583,7 @@
       top: 0px;
       z-index: 100;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-      max-width: 80%;
+      max-width: 92rem;
       border-radius: 20px;
       transform: translate3d(0px, 16px, 0px);
     }
@@ -968,7 +979,7 @@
 </head>
 
 <body class="bg-white">
-  <nav id="main-nav">
+  <nav class="w-custom mx-auto " id="main-nav">
     <!-- Logo -->
     <a href="#" class="logo">
       <!-- SVG Globe (matching Ralco brand colors) -->
@@ -1193,14 +1204,17 @@
     }
   </script>
   <!-- Hero section -->
-  <section class="relative overflow-hidden bg-[#f5f9ff]">
+  <section
+    style="background-image: url(./images/Desktop\ -\ 5.png); background-size: cover;  background-position: center;  margin-top: -60px;
+    padding-top: 50px;"
+    class="relative overflow-hidden ">
     <!-- Background Glow -->
-    <div class="absolute inset-0">
+    <!-- <div class="absolute inset-0">
       <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-200/30 rounded-full blur-3xl"></div>
       <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo-200/40 rounded-full blur-3xl"></div>
-    </div>
+    </div> -->
 
-    <div class="relative max-w-7xl mx-auto px-6 lg:px-10 py-16 lg:py-24">
+    <div class="relative w-custom mx-auto py-16 lg:py-24">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
         <!-- LEFT CONTENT -->
@@ -1231,7 +1245,7 @@
           <!-- Paragraph -->
           <p class="mt-6 text-base sm:text-lg leading-8 text-slate-600 max-w-2xl mx-auto lg:mx-0">
             Avoid productivity loss and capital drain from poor IT infrastructure.
-            Over 60% of businesses overspend on owned equipment.           </br>Ralco Synergy
+            Over 60% of businesses overspend on owned equipment. </br>Ralco Synergy
             delivers everything your business needs, from servers, networking gear,
             and laptops to printers, AV equipment, and managed IT services, all on
             flexible rental terms built for businesses that want to scale smarter
@@ -1241,7 +1255,8 @@
           <!-- Buttons -->
           <div class="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
 
-            <a href="#"
+            <a style="    animation: pulse 1s infinite 
+ease-in-out alternate;" href="#"
               class="px-8 py-4 rounded-full bg-blue-600 text-white font-semibold shadow-lg shadow-blue-500/30 hover:bg-blue-700 transition-all duration-300 hover:-translate-y-1">
               Get Quote
             </a>
@@ -1261,159 +1276,152 @@
         <div class="relative">
 
           <!-- Main Card -->
-          <div
-            class="relative bg-white/80 backdrop-blur-xl border border-white/50 rounded-[32px] shadow-2xl p-4 lg:p-6">
+          <div class="">
 
-            <!-- Top Floating Card -->
-            <div class="absolute -top-6 left-10 bg-white rounded-2xl shadow-xl px-5 py-3 border border-slate-100">
-              <p class="text-sm text-slate-500">Active Infrastructure</p>
-              <h4 class="text-2xl font-bold text-blue-600">98%</h4>
-            </div>
+
 
             <!-- Image -->
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&auto=format&fit=crop"
-              alt="IT Infrastructure" class="w-full rounded-2xl object-cover">
+            <img src="./images/hero-right.png" alt="IT Infrastructure" class="w-full rounded-2xl object-cover">
 
-            <!-- Bottom Floating Card -->
-            <div class="absolute -bottom-6 right-6 bg-white rounded-2xl shadow-xl p-4 border border-slate-100 w-56">
-              <p class="text-sm text-slate-500 mb-2">
-                Managed IT Services
-              </p>
-
-              <div class="space-y-2">
-                <div class="flex items-center justify-between text-sm">
-                  <span class="text-slate-600">Servers</span>
-                  <span class="font-semibold text-blue-600">92%</span>
-                </div>
-
-                <div class="w-full bg-slate-100 rounded-full h-2">
-                  <div class="bg-blue-600 h-2 rounded-full w-[92%]"></div>
-                </div>
-
-                <div class="flex items-center justify-between text-sm">
-                  <span class="text-slate-600">Networking</span>
-                  <span class="font-semibold text-blue-600">88%</span>
-                </div>
-
-                <div class="w-full bg-slate-100 rounded-full h-2">
-                  <div class="bg-blue-600 h-2 rounded-full w-[88%]"></div>
-                </div>
-              </div>
-            </div>
 
           </div>
-
         </div>
-
       </div>
     </div>
   </section>
-
   <!-- Hero section end -->
 
   <!-- Brand section  -->
-  <div class="brand-marquee">
+  <div class="brand-marquee max-w-5xl">
     <div class="brand-track">
       <!-- Original -->
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/3.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/2.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/Untitled-design-14.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/Untitled-design-15.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/Untitled-design-4.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/5.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/4.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/1-1.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/Untitled-design-9.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/Untitled-design-6.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/6.png" alt="" />
+      <img src="./images/logo.svg" alt="" />
+      <img src="./images/logo2.svg" alt="" />
+      <img src="./images/logo3.svg" alt="" />
+      <img src="./images/logo4.svg" alt="" />
+      <img src="./images/logo5.svg" alt="" />
+      <img src="./images/logo6.svg" alt="" />
+      <img src="./images/logo7.svg" alt="" />
+      <img src="./images/logo.svg" alt="" />
+      <img src="./images/logo2.svg" alt="" />
+      <img src="./images/logo3.svg" alt="" />
+      <img src="./images/logo4.svg" alt="" />
+      <img src="./images/logo5.svg" alt="" />
+      <img src="./images/logo6.svg" alt="" />
+      <img src="./images/logo7.svg" alt="" />
+      <img src="./images/logo.svg" alt="" />
+      <img src="./images/logo2.svg" alt="" />
+      <img src="./images/logo3.svg" alt="" />
+      <img src="./images/logo4.svg" alt="" />
+      <img src="./images/logo5.svg" alt="" />
+      <img src="./images/logo6.svg" alt="" />
+      <img src="./images/logo7.svg" alt="" />
 
-      <!-- Duplicate for smooth infinite loop -->
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/3.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/2.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/Untitled-design-14.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/Untitled-design-15.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/Untitled-design-4.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/5.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/4.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/1-1.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/Untitled-design-9.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/Untitled-design-6.png" alt="" />
-      <img src="https://ralcoindia.com/wp-content/uploads/2025/03/6.png" alt="" />
+
     </div>
   </div>
   <!-- Brand section  end -->
 
   <!-- about section -->
-  <div class="container mx-auto px-4">
-    <img class="image-fulid" src="./images/Group 91.png" alt="" />
+  <div class="w-custom mx-auto ">
+    <img class="image-fulid mx-auto" src="./images/Group 91.png" alt="" />
   </div>
 
   <!-- <section class="about-section">
-      <div class="about-inner">
-        <div class="image-card slide-from-left">
-          <img src="./images/Frame 886.png" alt="Ralco Office Building" />
-        </div>
-
-        <div
-          style="background-image: url(./images/rajat.png)"
-          class="text-card slide-from-right"
-        >
-          <h2>
-            About
-            <span
-              style="font-style: italic; font-family: Segoe Print"
-              class="ralco-italic"
-              >Ralco</span
-            >
-          </h2>
-
-          <p>
-            Founded in 1994, Ralco Synergy Private Ltd. has grown from a single
-            office in Bangalore to seven locations across India, backed by a
-            team of 150+ professionals.
-          </p>
-
-          <p>
-            We are a trusted provider of IT hardware (rental &amp; purchase),
-            software license reselling, and electronic &amp; electrical
-            components–including desktops, laptops &amp; servers, Cisco &amp;
-            networking devices, IoT &amp; R&amp;D components, and 50+ software
-            licenses–backed by competitive pricing, a global supplier network,
-            and timely deliveries across industries nationwide.
-          </p>
-
-          <p>
-            Our experienced team is committed to helping you find the right
-            solutions, backed by quality products &amp; exceptional service that
-            keep your business running smoothly.
-          </p>
-        </div>
+    <div class="about-inner">
+      <div class="image-card slide-from-left">
+        <img src="./images/rolco-buliding.png" alt="Ralco Office Building" />
       </div>
-    </section> -->
 
-  <!-- <script>
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          });
-        },
-        { threshold: 0.15 },
-      );
+      <div style="background-image: url(./images/about-rigt-img-bg.png)" class="text-card slide-from-right">
+        <h2>
+          About
+          <span style="font-style: italic; font-family: Segoe Print" class="ralco-italic">Ralco</span>
+        </h2>
 
-      document
-        .querySelectorAll(".slide-from-left, .slide-from-right")
-        .forEach((el) => {
-          observer.observe(el);
+        <p>
+          Founded in 1994, Ralco Synergy Private Ltd. has grown from a single
+          office in Bangalore to seven locations across India, backed by a
+          team of 150+ professionals.
+        </p>
+
+        <p>
+          We are a trusted provider of IT hardware (rental &amp; purchase),
+          software license reselling, and electronic &amp; electrical
+          components–including desktops, laptops &amp; servers, Cisco &amp;
+          networking devices, IoT &amp; R&amp;D components, and 50+ software
+          licenses–backed by competitive pricing, a global supplier network,
+          and timely deliveries across industries nationwide.
+        </p>
+
+        <p>
+          Our experienced team is committed to helping you find the right
+          solutions, backed by quality products &amp; exceptional service that
+          keep your business running smoothly.
+        </p>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- <section class="w-custom mx-auto ">
+    <div class="about-inner">
+      <div class="image-card slide-from-left">
+        <img src="./images/rolco-buliding.png" alt="Ralco Office Building" />
+      </div>
+
+      <div style="background-image: url(./images/about-rigt-img-bg.png)" class="text-card slide-from-right">
+        <h2>
+          About
+          <span style="font-style: italic; font-family: Segoe Print" class="ralco-italic">Ralco</span>
+        </h2>
+
+        <p>
+          Founded in 1994, Ralco Synergy Private Ltd. has grown from a single
+          office in Bangalore to seven locations across India, backed by a
+          team of 150+ professionals.
+        </p>
+
+        <p>
+          We are a trusted provider of IT hardware (rental &amp; purchase),
+          software license reselling, and electronic &amp; electrical
+          components–including desktops, laptops &amp; servers, Cisco &amp;
+          networking devices, IoT &amp; R&amp;D components, and 50+ software
+          licenses–backed by competitive pricing, a global supplier network,
+          and timely deliveries across industries nationwide.
+        </p>
+
+        <p>
+          Our experienced team is committed to helping you find the right
+          solutions, backed by quality products &amp; exceptional service that
+          keep your business running smoothly.
+        </p>
+      </div>
+    </div>
+  </section> -->
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
         });
-    </script> -->
+      },
+      { threshold: 0.15 },
+    );
+
+    document
+      .querySelectorAll(".slide-from-left, .slide-from-right")
+      .forEach((el) => {
+        observer.observe(el);
+      });
+  </script>
+
   <!-- about section end -->
   <!-- Offerings section  -->
 
   <section class="py-16 md:py-24 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="w-custom mx-auto px-4">
       <!-- TOP CONTENT -->
       <div class="text-center">
         <p class="text-[#111111] text-2xl md:text-[30px] font-medium">
@@ -1427,14 +1435,14 @@
           </span>
         </h2>
 
-        <p class="mt-5 text-[#555555] text-sm sm:text-base max-w-4xl mx-auto">
+        <p class="mt-5 text-[#111] text-sm sm:text-base max-w-4xl mx-auto">
           Eight core service lines built for agility, performance, and
           cost-efficiency across every stage of your technology lifecycle.
         </p>
       </div>
 
       <!-- CARDS -->
-      <div class="max-w-7xl mx-auto">
+      <div class="w-custom mx-auto mt-6">
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7">
           <!-- CARD 1 -->
           <div class="service-card h-[250px] bg-card-1">
@@ -1460,7 +1468,13 @@
 
                 <a href="#" class="flex items-center gap-3 text-[16px] font-medium text-[#11284b]">
                   Know More
-                  <span class="text-3xl">→</span>
+                  <span class="text-3xl"><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 6.36401C0.447715 6.36401 -4.82823e-08 6.81173 0 7.36401C4.82823e-08 7.9163 0.447715 8.36401 1 8.36401L1 7.36401L1 6.36401ZM19.7071 8.07112C20.0976 7.68059 20.0976 7.04743 19.7071 6.65691L13.3431 0.292945C12.9526 -0.0975796 12.3195 -0.0975795 11.9289 0.292945C11.5384 0.683469 11.5384 1.31663 11.9289 1.70716L17.5858 7.36401L11.9289 13.0209C11.5384 13.4114 11.5384 14.0446 11.9289 14.4351C12.3195 14.8256 12.9526 14.8256 13.3431 14.4351L19.7071 8.07112ZM1 7.36401L1 8.36401L19 8.36401L19 7.36401L19 6.36401L1 6.36401L1 7.36401Z"
+                        fill="#06203C" />
+                    </svg>
+                  </span>
                 </a>
               </div>
 
@@ -1493,7 +1507,14 @@
 
                   <a href="#" class="flex items-center gap-3 text-[16px] font-medium">
                     Know More
-                    <span class="text-3xl">→</span>
+                    <span class="text-3xl"><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1 6.36401C0.447715 6.36401 -4.82823e-08 6.81173 0 7.36401C4.82823e-08 7.9163 0.447715 8.36401 1 8.36401L1 7.36401L1 6.36401ZM19.7071 8.07112C20.0976 7.68059 20.0976 7.04743 19.7071 6.65691L13.3431 0.292945C12.9526 -0.0975796 12.3195 -0.0975795 11.9289 0.292945C11.5384 0.683469 11.5384 1.31663 11.9289 1.70716L17.5858 7.36401L11.9289 13.0209C11.5384 13.4114 11.5384 14.0446 11.9289 14.4351C12.3195 14.8256 12.9526 14.8256 13.3431 14.4351L19.7071 8.07112ZM1 7.36401L1 8.36401L19 8.36401L19 7.36401L19 6.36401L1 6.36401L1 7.36401Z"
+                          fill="white" />
+                      </svg>
+
+                    </span>
                   </a>
                 </div>
               </div>
@@ -1520,7 +1541,13 @@
 
                 <a href="#" class="flex items-center gap-3 text-[16px] font-medium text-[#11284b]">
                   Know More
-                  <span class="text-3xl">→</span>
+                  <span class="text-3xl"><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 6.36401C0.447715 6.36401 -4.82823e-08 6.81173 0 7.36401C4.82823e-08 7.9163 0.447715 8.36401 1 8.36401L1 7.36401L1 6.36401ZM19.7071 8.07112C20.0976 7.68059 20.0976 7.04743 19.7071 6.65691L13.3431 0.292945C12.9526 -0.0975796 12.3195 -0.0975795 11.9289 0.292945C11.5384 0.683469 11.5384 1.31663 11.9289 1.70716L17.5858 7.36401L11.9289 13.0209C11.5384 13.4114 11.5384 14.0446 11.9289 14.4351C12.3195 14.8256 12.9526 14.8256 13.3431 14.4351L19.7071 8.07112ZM1 7.36401L1 8.36401L19 8.36401L19 7.36401L19 6.36401L1 6.36401L1 7.36401Z"
+                        fill="#06203C" />
+                    </svg>
+                  </span>
                 </a>
               </div>
 
@@ -1549,7 +1576,13 @@
 
                   <a href="#" class="flex items-center gap-3 text-[16px] font-medium">
                     Know More
-                    <span class="text-3xl">→</span>
+                    <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 6.36401C0.447715 6.36401 -4.82823e-08 6.81173 0 7.36401C4.82823e-08 7.9163 0.447715 8.36401 1 8.36401L1 7.36401L1 6.36401ZM19.7071 8.07112C20.0976 7.68059 20.0976 7.04743 19.7071 6.65691L13.3431 0.292945C12.9526 -0.0975796 12.3195 -0.0975795 11.9289 0.292945C11.5384 0.683469 11.5384 1.31663 11.9289 1.70716L17.5858 7.36401L11.9289 13.0209C11.5384 13.4114 11.5384 14.0446 11.9289 14.4351C12.3195 14.8256 12.9526 14.8256 13.3431 14.4351L19.7071 8.07112ZM1 7.36401L1 8.36401L19 8.36401L19 7.36401L19 6.36401L1 6.36401L1 7.36401Z"
+                        fill="white" />
+                    </svg>
+
+                    </span>
                   </a>
                 </div>
               </div>
@@ -1583,7 +1616,13 @@
 
                 <a href="#" class="flex items-center gap-3 text-[16px] font-medium text-[#11284b]">
                   Know More
-                  <span class="text-3xl">→</span>
+                  <span class="text-3xl"><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 6.36401C0.447715 6.36401 -4.82823e-08 6.81173 0 7.36401C4.82823e-08 7.9163 0.447715 8.36401 1 8.36401L1 7.36401L1 6.36401ZM19.7071 8.07112C20.0976 7.68059 20.0976 7.04743 19.7071 6.65691L13.3431 0.292945C12.9526 -0.0975796 12.3195 -0.0975795 11.9289 0.292945C11.5384 0.683469 11.5384 1.31663 11.9289 1.70716L17.5858 7.36401L11.9289 13.0209C11.5384 13.4114 11.5384 14.0446 11.9289 14.4351C12.3195 14.8256 12.9526 14.8256 13.3431 14.4351L19.7071 8.07112ZM1 7.36401L1 8.36401L19 8.36401L19 7.36401L19 6.36401L1 6.36401L1 7.36401Z"
+                        fill="#06203C" />
+                    </svg>
+                  </span>
                 </a>
               </div>
 
@@ -1619,7 +1658,14 @@
 
                   <a href="#" class="flex items-center gap-3 text-[16px] font-medium">
                     Know More
-                    <span class="text-3xl">→</span>
+                    <span class="text-3xl"><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1 6.36401C0.447715 6.36401 -4.82823e-08 6.81173 0 7.36401C4.82823e-08 7.9163 0.447715 8.36401 1 8.36401L1 7.36401L1 6.36401ZM19.7071 8.07112C20.0976 7.68059 20.0976 7.04743 19.7071 6.65691L13.3431 0.292945C12.9526 -0.0975796 12.3195 -0.0975795 11.9289 0.292945C11.5384 0.683469 11.5384 1.31663 11.9289 1.70716L17.5858 7.36401L11.9289 13.0209C11.5384 13.4114 11.5384 14.0446 11.9289 14.4351C12.3195 14.8256 12.9526 14.8256 13.3431 14.4351L19.7071 8.07112ZM1 7.36401L1 8.36401L19 8.36401L19 7.36401L19 6.36401L1 6.36401L1 7.36401Z"
+                          fill="white" />
+                      </svg>
+
+                    </span>
                   </a>
                 </div>
               </div>
@@ -1648,7 +1694,13 @@
 
                 <a href="#" class="flex items-center gap-3 text-[16px] font-medium text-[#11284b]">
                   Know More
-                  <span class="text-3xl">→</span>
+                  <span class="text-3xl"><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 6.36401C0.447715 6.36401 -4.82823e-08 6.81173 0 7.36401C4.82823e-08 7.9163 0.447715 8.36401 1 8.36401L1 7.36401L1 6.36401ZM19.7071 8.07112C20.0976 7.68059 20.0976 7.04743 19.7071 6.65691L13.3431 0.292945C12.9526 -0.0975796 12.3195 -0.0975795 11.9289 0.292945C11.5384 0.683469 11.5384 1.31663 11.9289 1.70716L17.5858 7.36401L11.9289 13.0209C11.5384 13.4114 11.5384 14.0446 11.9289 14.4351C12.3195 14.8256 12.9526 14.8256 13.3431 14.4351L19.7071 8.07112ZM1 7.36401L1 8.36401L19 8.36401L19 7.36401L19 6.36401L1 6.36401L1 7.36401Z"
+                        fill="#06203C" />
+                    </svg>
+                  </span>
                 </a>
               </div>
 
@@ -1679,7 +1731,14 @@
 
                   <a href="#" class="flex items-center gap-3 text-[16px] font-medium">
                     Know More
-                    <span class="text-3xl">→</span>
+                    <span class="text-3xl"><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1 6.36401C0.447715 6.36401 -4.82823e-08 6.81173 0 7.36401C4.82823e-08 7.9163 0.447715 8.36401 1 8.36401L1 7.36401L1 6.36401ZM19.7071 8.07112C20.0976 7.68059 20.0976 7.04743 19.7071 6.65691L13.3431 0.292945C12.9526 -0.0975796 12.3195 -0.0975795 11.9289 0.292945C11.5384 0.683469 11.5384 1.31663 11.9289 1.70716L17.5858 7.36401L11.9289 13.0209C11.5384 13.4114 11.5384 14.0446 11.9289 14.4351C12.3195 14.8256 12.9526 14.8256 13.3431 14.4351L19.7071 8.07112ZM1 7.36401L1 8.36401L19 8.36401L19 7.36401L19 6.36401L1 6.36401L1 7.36401Z"
+                          fill="white" />
+                      </svg>
+
+                    </span>
                   </a>
                 </div>
               </div>
@@ -1715,7 +1774,13 @@
 
                 <a href="#" class="flex items-center gap-3 text-[16px] font-medium text-[#11284b]">
                   Know More
-                  <span class="text-3xl">→</span>
+                  <span class="text-3xl"><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 6.36401C0.447715 6.36401 -4.82823e-08 6.81173 0 7.36401C4.82823e-08 7.9163 0.447715 8.36401 1 8.36401L1 7.36401L1 6.36401ZM19.7071 8.07112C20.0976 7.68059 20.0976 7.04743 19.7071 6.65691L13.3431 0.292945C12.9526 -0.0975796 12.3195 -0.0975795 11.9289 0.292945C11.5384 0.683469 11.5384 1.31663 11.9289 1.70716L17.5858 7.36401L11.9289 13.0209C11.5384 13.4114 11.5384 14.0446 11.9289 14.4351C12.3195 14.8256 12.9526 14.8256 13.3431 14.4351L19.7071 8.07112ZM1 7.36401L1 8.36401L19 8.36401L19 7.36401L19 6.36401L1 6.36401L1 7.36401Z"
+                        fill="#06203C" />
+                    </svg>
+                  </span>
                 </a>
               </div>
 
@@ -1754,7 +1819,14 @@
 
                   <a href="#" class="flex items-center gap-3 text-[16px] font-medium">
                     Know More
-                    <span class="text-3xl">→</span>
+                    <span class="text-3xl"><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1 6.36401C0.447715 6.36401 -4.82823e-08 6.81173 0 7.36401C4.82823e-08 7.9163 0.447715 8.36401 1 8.36401L1 7.36401L1 6.36401ZM19.7071 8.07112C20.0976 7.68059 20.0976 7.04743 19.7071 6.65691L13.3431 0.292945C12.9526 -0.0975796 12.3195 -0.0975795 11.9289 0.292945C11.5384 0.683469 11.5384 1.31663 11.9289 1.70716L17.5858 7.36401L11.9289 13.0209C11.5384 13.4114 11.5384 14.0446 11.9289 14.4351C12.3195 14.8256 12.9526 14.8256 13.3431 14.4351L19.7071 8.07112ZM1 7.36401L1 8.36401L19 8.36401L19 7.36401L19 6.36401L1 6.36401L1 7.36401Z"
+                          fill="white" />
+                      </svg>
+
+                    </span>
                   </a>
                 </div>
               </div>
@@ -1781,7 +1853,13 @@
 
                 <a href="#" class="flex items-center gap-3 text-[16px] font-medium text-[#11284b]">
                   Know More
-                  <span class="text-3xl">→</span>
+                  <span class="text-3xl"><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 6.36401C0.447715 6.36401 -4.82823e-08 6.81173 0 7.36401C4.82823e-08 7.9163 0.447715 8.36401 1 8.36401L1 7.36401L1 6.36401ZM19.7071 8.07112C20.0976 7.68059 20.0976 7.04743 19.7071 6.65691L13.3431 0.292945C12.9526 -0.0975796 12.3195 -0.0975795 11.9289 0.292945C11.5384 0.683469 11.5384 1.31663 11.9289 1.70716L17.5858 7.36401L11.9289 13.0209C11.5384 13.4114 11.5384 14.0446 11.9289 14.4351C12.3195 14.8256 12.9526 14.8256 13.3431 14.4351L19.7071 8.07112ZM1 7.36401L1 8.36401L19 8.36401L19 7.36401L19 6.36401L1 6.36401L1 7.36401Z"
+                        fill="#06203C" />
+                    </svg>
+                  </span>
                 </a>
               </div>
 
@@ -1811,7 +1889,14 @@
 
                   <a href="#" class="flex items-center gap-3 text-[16px] font-medium">
                     Know More
-                    <span class="text-3xl">→</span>
+                    <span class="text-3xl"><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1 6.36401C0.447715 6.36401 -4.82823e-08 6.81173 0 7.36401C4.82823e-08 7.9163 0.447715 8.36401 1 8.36401L1 7.36401L1 6.36401ZM19.7071 8.07112C20.0976 7.68059 20.0976 7.04743 19.7071 6.65691L13.3431 0.292945C12.9526 -0.0975796 12.3195 -0.0975795 11.9289 0.292945C11.5384 0.683469 11.5384 1.31663 11.9289 1.70716L17.5858 7.36401L11.9289 13.0209C11.5384 13.4114 11.5384 14.0446 11.9289 14.4351C12.3195 14.8256 12.9526 14.8256 13.3431 14.4351L19.7071 8.07112ZM1 7.36401L1 8.36401L19 8.36401L19 7.36401L19 6.36401L1 6.36401L1 7.36401Z"
+                          fill="white" />
+                      </svg>
+
+                    </span>
                   </a>
                 </div>
               </div>
@@ -1838,7 +1923,13 @@
 
                 <a href="#" class="flex items-center gap-3 text-[16px] font-medium text-[#11284b]">
                   Know More
-                  <span class="text-3xl">→</span>
+                  <span class="text-3xl"><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 6.36401C0.447715 6.36401 -4.82823e-08 6.81173 0 7.36401C4.82823e-08 7.9163 0.447715 8.36401 1 8.36401L1 7.36401L1 6.36401ZM19.7071 8.07112C20.0976 7.68059 20.0976 7.04743 19.7071 6.65691L13.3431 0.292945C12.9526 -0.0975796 12.3195 -0.0975795 11.9289 0.292945C11.5384 0.683469 11.5384 1.31663 11.9289 1.70716L17.5858 7.36401L11.9289 13.0209C11.5384 13.4114 11.5384 14.0446 11.9289 14.4351C12.3195 14.8256 12.9526 14.8256 13.3431 14.4351L19.7071 8.07112ZM1 7.36401L1 8.36401L19 8.36401L19 7.36401L19 6.36401L1 6.36401L1 7.36401Z"
+                        fill="#06203C" />
+                    </svg>
+                  </span>
                 </a>
               </div>
 
@@ -1868,7 +1959,14 @@
 
                   <a href="#" class="flex items-center gap-3 text-[16px] font-medium">
                     Know More
-                    <span class="text-3xl">→</span>
+                    <span class="text-3xl"><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1 6.36401C0.447715 6.36401 -4.82823e-08 6.81173 0 7.36401C4.82823e-08 7.9163 0.447715 8.36401 1 8.36401L1 7.36401L1 6.36401ZM19.7071 8.07112C20.0976 7.68059 20.0976 7.04743 19.7071 6.65691L13.3431 0.292945C12.9526 -0.0975796 12.3195 -0.0975795 11.9289 0.292945C11.5384 0.683469 11.5384 1.31663 11.9289 1.70716L17.5858 7.36401L11.9289 13.0209C11.5384 13.4114 11.5384 14.0446 11.9289 14.4351C12.3195 14.8256 12.9526 14.8256 13.3431 14.4351L19.7071 8.07112ZM1 7.36401L1 8.36401L19 8.36401L19 7.36401L19 6.36401L1 6.36401L1 7.36401Z"
+                          fill="white" />
+                      </svg>
+
+                    </span>
                   </a>
                 </div>
               </div>
@@ -1898,7 +1996,13 @@
 
                 <a href="#" class="flex items-center gap-3 text-[16px] font-medium text-[#11284b]">
                   Know More
-                  <span class="text-3xl">→</span>
+                  <span class="text-3xl"><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1 6.36401C0.447715 6.36401 -4.82823e-08 6.81173 0 7.36401C4.82823e-08 7.9163 0.447715 8.36401 1 8.36401L1 7.36401L1 6.36401ZM19.7071 8.07112C20.0976 7.68059 20.0976 7.04743 19.7071 6.65691L13.3431 0.292945C12.9526 -0.0975796 12.3195 -0.0975795 11.9289 0.292945C11.5384 0.683469 11.5384 1.31663 11.9289 1.70716L17.5858 7.36401L11.9289 13.0209C11.5384 13.4114 11.5384 14.0446 11.9289 14.4351C12.3195 14.8256 12.9526 14.8256 13.3431 14.4351L19.7071 8.07112ZM1 7.36401L1 8.36401L19 8.36401L19 7.36401L19 6.36401L1 6.36401L1 7.36401Z"
+                        fill="#06203C" />
+                    </svg>
+                  </span>
                 </a>
               </div>
 
@@ -1931,7 +2035,14 @@
 
                   <a href="#" class="flex items-center gap-3 text-[16px] font-medium">
                     Know More
-                    <span class="text-3xl">→</span>
+                    <span class="text-3xl"><svg width="20" height="15" viewBox="0 0 20 15" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M1 6.36401C0.447715 6.36401 -4.82823e-08 6.81173 0 7.36401C4.82823e-08 7.9163 0.447715 8.36401 1 8.36401L1 7.36401L1 6.36401ZM19.7071 8.07112C20.0976 7.68059 20.0976 7.04743 19.7071 6.65691L13.3431 0.292945C12.9526 -0.0975796 12.3195 -0.0975795 11.9289 0.292945C11.5384 0.683469 11.5384 1.31663 11.9289 1.70716L17.5858 7.36401L11.9289 13.0209C11.5384 13.4114 11.5384 14.0446 11.9289 14.4351C12.3195 14.8256 12.9526 14.8256 13.3431 14.4351L19.7071 8.07112ZM1 7.36401L1 8.36401L19 8.36401L19 7.36401L19 6.36401L1 6.36401L1 7.36401Z"
+                          fill="white" />
+                      </svg>
+
+                    </span>
                   </a>
                 </div>
               </div>
@@ -1944,39 +2055,17 @@
   <!-- Offerings section end -->
   <!-- stats section  -->
 
-  <section class="stats-section">
+  <section class="stats-section w-custom mx-auto">
     <div class="stats-inner">
       <!-- LEFT: Heading text -->
       <div class="left-text">
-        <p class="subtitle">Why Choose Ralco</p>
+        <p class="subtitle">Why Choose us</p>
         <h2>What Sets Us Apart from the Rest</h2>
       </div>
 
-      <!-- RIGHT: 2x2 stat cards grid -->
-      <div class="stats-grid">
-        <!-- Card 1: 30+ Years of Legacy -->
-        <div class="stat-card">
-          <span class="stat-number" data-target="30" data-suffix="+">0+</span>
-          <span class="stat-label">Years of<br />Legacy</span>
-        </div>
-
-        <!-- Card 2: 1000+ Satisfied Customers -->
-        <div class="stat-card">
-          <span class="stat-number" data-target="1000" data-suffix="+">0+</span>
-          <span class="stat-label">Satisfied<br />Customers</span>
-        </div>
-
-        <!-- Card 3: 150+ Strong Team -->
-        <div class="stat-card">
-          <span class="stat-number" data-target="150" data-suffix="+">0+</span>
-          <span class="stat-label">Strong<br />Team</span>
-        </div>
-
-        <!-- Card 4: 7 Locations Across India -->
-        <div class="stat-card">
-          <span class="stat-number" data-target="7" data-suffix="">0</span>
-          <span class="stat-label">Locations<br />Across India</span>
-        </div>
+      <!-- RIGHT: img -->
+      <div>
+        <img src="./images/why choose.png" alt="">
       </div>
     </div>
   </section>
@@ -2037,281 +2126,434 @@
   </script>
   <!-- stats section end -->
   <!-- testimonials section -->
-  <section class="overflow-x-hidden">
-    <!-- SECTION -->
-    <div class="py-14">
-      <!-- HEADING -->
-      <div class="text-center px-4">
-        <p class="text-[#1A1A1A] font-medium text-xl md:text-[30px]">
-          What Clients Say
-        </p>
-
-        <h2
-          class="mt-3 font-bold text-[#000000] text-[32px] leading-[44px] sm:text-[42px] sm:leading-[56px] md:text-[62px] md:leading-[78px]">
-          Trusted by Teams Across
-          <span style="font-style: italic; font-family: Segoe Print" class="text-[#1677FF] italic font-medium">
-            India
-          </span>
-        </h2>
-      </div>
-
-      <!-- SLIDER WRAPPER -->
-      <div class="relative mt-14">
-        <!-- LEFT BUTTON -->
-        <button id="prevBtn"
-          class="hidden lg:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 w-14 h-14 rounded-full bg-white/90 backdrop-blur-md shadow-2xl items-center justify-center hover:scale-110 transition duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#0B56C5]" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-
-        <!-- RIGHT BUTTON -->
-        <button id="nextBtn"
-          class="hidden lg:flex absolute right-6 top-1/2 -translate-y-1/2 z-20 w-14 h-14 rounded-full bg-white/90 backdrop-blur-md shadow-2xl items-center justify-center hover:scale-110 transition duration-300">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-[#0B56C5]" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-
-        <!-- SLIDER -->
-        <div id="slider" class="slider flex gap-6 overflow-x-auto snap-x snap-mandatory px-4 md:px-10 lg:px-20 py-5">
-          <!-- CARD 1 -->
-          <div
-            class="snap-center shrink-0 w-[92%] sm:w-[420px] rounded-[30px] bg-[#74859B] shadow-[0_10px_30px_rgba(0,0,0,0.12)] px-7 md:px-10 py-10 text-center">
-            <!-- <h3 class="text-white text-3xl font-semibold">Cognizant</h3> -->
-            <div style="display: flex; justify-content: center">
-              <img src="./images/COG-Logo.svg" alt="" srcset="" />
-            </div>
-            <div class="flex justify-center gap-2 mt-8">
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-            </div>
-
-            <p class="mt-8 text-white/95 leading-7 text-sm md:text-base">
-              We have been working on a very complex and one of its kind projects and the support from the entire RALCO
-              TEAM has been phenomenal and the service / timely commitment to deliver the varied products as part of
-              several POs raised is noteworthy. </p>
-
-            <p class="mt-6 text-white/95 leading-7 text-sm md:text-base">
-              Entire team helped us rally the formalities right from quote to cart to deliver, with absolute due
-              diligence , meticulous paperwork , prompt responses to follow-up notes and the required logistics for
-              hassle-free, safe delivery to Cognizant premises. Our sincere thanks to the team Ralco ! </p>
-          </div>
-
-          <!-- CARD 2 -->
-          <div
-            class="snap-center shrink-0 w-[92%] sm:w-[420px] rounded-[30px] bg-[#0057C8] shadow-[0_10px_30px_rgba(0,0,0,0.12)] px-7 md:px-10 py-10 text-center">
-            <!-- <h3 class="text-white text-3xl font-semibold">
-                Dell Technologies
-              </h3> -->
-            <div style="display: flex; justify-content: center">
-              <img class="text-center" src="./images/Dell_Technologies-Logo.svg" alt="" />
-            </div>
-            <div class="flex justify-center gap-2 mt-8">
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-            </div>
-
-            <p class="mt-8 text-white/95 leading-7 text-sm md:text-base">
-              Thank you for your best service. Your timely deliveries and proactive communication have made a
-              significant impact on our operations. Ralco Teams personal attention and support have been invaluable in
-              ensuring everything runs smoothly. </p>
-
-            <p class="mt-6 text-white/95 leading-7 text-sm md:text-base">
-              We appreciate Ralco’s dedication to meeting our needs and look forward to continuing this successful
-              partnership in the coming year. Wishing you continued success in coming years.
-            </p>
-          </div>
-
-          <!-- CARD 3 -->
-          <div
-            class="snap-center shrink-0 w-[92%] sm:w-[420px] rounded-[30px] bg-[#61748C] shadow-[0_10px_30px_rgba(0,0,0,0.12)] px-7 md:px-10 py-10 text-center">
-            <!-- <h3 class="text-white text-3xl font-semibold">Prescinto</h3> -->
-            <div style="display: flex; justify-content: center">
-              <img src="./images/prewdinto-logo.svg" alt="" />
-            </div>
-            <div class="flex justify-center gap-2 mt-8">
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-            </div>
-
-            <p class="mt-8 text-white/95 leading-7 text-sm md:text-base">
-              I wanted to take a moment to express my gratitude and appreciation for the outstanding service Ralco team
-              provides. Their sales team is incredibly helpful, interactive, and an excellent listener. Their engineers
-              troubleshooting skills are outstanding, and consistently gone above and beyond to ensure everything runs
-              smoothly. We are truly grateful to have such a skilled engineer assisting us. </p>
-
-            <p class="mt-6 text-white/95 leading-7 text-sm md:text-base">
-              Overall, working with Ralco Synergy has been an excellent experience, and we sincerely look forward to
-              continuing a long and fruitful business relationship with your team.
-            </p>
-          </div>
-
-          <!-- CARD 4 -->
-          <div
-            class="snap-center shrink-0 w-[92%] sm:w-[420px] rounded-[30px] bg-[#6D7B8D] shadow-[0_10px_30px_rgba(0,0,0,0.12)] px-7 md:px-10 py-10 text-center">
-            <h3 class="text-white text-3xl font-semibold">Infosys</h3>
-
-            <div class="flex justify-center gap-2 mt-8">
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-            </div>
-
-            <p class="mt-8 text-white/95 leading-7 text-sm md:text-base">
-              Their professional approach and fast execution helped us
-              complete multiple projects without delays or complications.
-            </p>
-
-            <p class="mt-6 text-white/95 leading-7 text-sm md:text-base">
-              We truly appreciate the quality standards and continuous support
-              provided by the team.
-            </p>
-          </div>
-
-          <!-- CARD 5 -->
-          <div
-            class="snap-center shrink-0 w-[92%] sm:w-[420px] rounded-[30px] bg-[#004CB4] shadow-[0_10px_30px_rgba(0,0,0,0.12)] px-7 md:px-10 py-10 text-center">
-            <h3 class="text-white text-3xl font-semibold">TCS</h3>
-
-            <div class="flex justify-center gap-2 mt-8">
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-            </div>
-
-            <p class="mt-8 text-white/95 leading-7 text-sm md:text-base">
-              We were impressed by the team’s dedication, strong
-              communication, and ability to handle urgent requirements
-              smoothly.
-            </p>
-
-            <p class="mt-6 text-white/95 leading-7 text-sm md:text-base">
-              Their attention to detail and consistency helped build long-term
-              trust and confidence.
-            </p>
-          </div>
-
-          <!-- CARD 6 -->
-          <div
-            class="snap-center shrink-0 w-[92%] sm:w-[420px] rounded-[30px] bg-[#74869A] shadow-[0_10px_30px_rgba(0,0,0,0.12)] px-7 md:px-10 py-10 text-center">
-            <h3 class="text-white text-3xl font-semibold">Wipro</h3>
-
-            <div class="flex justify-center gap-2 mt-8">
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-              <span class="text-[#FF9800] text-3xl">★</span>
-            </div>
-
-            <p class="mt-8 text-white/95 leading-7 text-sm md:text-base">
-              The experience working with your organization has been excellent
-              from start to finish with top-notch execution quality.
-            </p>
-
-            <p class="mt-6 text-white/95 leading-7 text-sm md:text-base">
-              We appreciate the professionalism and proactive support
-              throughout every stage of the collaboration.
-            </p>
-          </div>
-        </div>
-
-        <!-- DOTS -->
-        <div class="flex justify-center items-center gap-3 mt-10">
-          <span class="w-3 h-3 rounded-full bg-gray-300"></span>
-
-          <span class="w-5 h-5 rounded-full bg-[#1677FF]"></span>
-
-          <span class="w-3 h-3 rounded-full bg-gray-300"></span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- SCRIPT -->
-  <script>
-    const slider = document.getElementById("slider");
-    const nextBtn = document.getElementById("nextBtn");
-    const prevBtn = document.getElementById("prevBtn");
-
-    const scrollAmount = 450;
-
-    // NEXT
-    nextBtn.addEventListener("click", () => {
-      slider.scrollBy({
-        left: scrollAmount,
-        behavior: "smooth",
-      });
-    });
-
-    // PREVIOUS
-    prevBtn.addEventListener("click", () => {
-      slider.scrollBy({
-        left: -scrollAmount,
-        behavior: "smooth",
-      });
-    });
-
-    // AUTO SLIDE
-    let autoSlide = setInterval(() => {
-      if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth - 10) {
-        slider.scrollTo({
-          left: 0,
-          behavior: "smooth",
-        });
-      } else {
-        slider.scrollBy({
-          left: scrollAmount,
-          behavior: "smooth",
-        });
-      }
-    }, 3500);
-
-    // STOP AUTO SLIDE ON HOVER
-    slider.addEventListener("mouseenter", () => {
-      clearInterval(autoSlide);
-    });
-
-    // RESTART AUTO SLIDE
-    slider.addEventListener("mouseleave", () => {
-      autoSlide = setInterval(() => {
-        if (
-          slider.scrollLeft + slider.clientWidth >=
-          slider.scrollWidth - 10
-        ) {
-          slider.scrollTo({
-            left: 0,
-            behavior: "smooth",
-          });
-        } else {
-          slider.scrollBy({
-            left: scrollAmount,
-            behavior: "smooth",
-          });
-        }
-      }, 3500);
-    });
-  </script>
 
   <!-- testimonials section end -->
 
+
+  <style>
+    .rv3* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    .rv3 {
+      width: 100%;
+      padding: 60px 24px;
+      display: flex;
+      gap: 48px;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap
+    }
+
+    .rv3-left {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      flex-shrink: 0
+    }
+
+    .rv3-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid #dde4f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 3;
+      overflow: hidden
+    }
+
+    .rv3-center img {
+      max-width: 65%;
+      max-height: 65%;
+      object-fit: contain
+    }
+
+    .rv3-logo {
+      position: absolute;
+
+
+    }
+
+    /* 
+  .rv3-logo img {
+    max-width: 56%;
+    max-height: 56%;
+    object-fit: contain;
+    filter: grayscale(15%)
+  } */
+
+    @keyframes rv3f {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-7px)
+      }
+    }
+
+    .rv3-logo:nth-child(1) {
+      top: 17%;
+      left: 0;
+      transform: translate(-50%, 0);
+      animation: rv3f 3.3s ease-in-out infinite 0s
+    }
+
+    .rv3-logo:nth-child(2) {
+      top: 2%;
+      left: 35%;
+      animation: rv3f 3.7s ease-in-out infinite 0.4s
+    }
+
+    .rv3-logo:nth-child(3) {
+      top: 18%;
+      right: 0;
+      transform: translateY(-50%);
+      animation: rv3f 3.0s ease-in-out infinite 0.8s
+    }
+
+    .rv3-logo:nth-child(4) {
+      bottom: 24%;
+      right: 0%;
+      animation: rv3f 3.5s ease-in-out infinite 0.2s
+    }
+
+    .rv3-logo:nth-child(5) {
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      animation: rv3f 3.2s ease-in-out infinite 0.6s
+    }
+
+    .rv3-logo:nth-child(6) {
+      bottom: 0;
+      left: 16%;
+      animation: rv3f 2.9s ease-in-out infinite 1.0s
+    }
+
+    .rv3-logo:nth-child(7) {
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      animation: rv3f 3.6s ease-in-out infinite 0.3s
+    }
+
+    .rv3-logo:nth-child(8) {
+      top: 10%;
+      left: 4%;
+      animation: rv3f 3.1s ease-in-out infinite 0.7s
+    }
+
+    .rv3-right {
+      flex: 1;
+      min-width: 260px;
+      max-width: 500px;
+      overflow: hidden
+    }
+
+    .rv3-viewport {
+      width: 100%;
+      overflow: hidden
+    }
+
+    .rv3-track {
+      display: flex;
+      gap: 14px;
+      will-change: transform;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)
+    }
+
+    .rv3-card {
+      flex: 0 0 78%;
+      border-radius: 20px;
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #3d6b9c
+    }
+
+    .rv3-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: #c8845a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      overflow: hidden
+    }
+
+    .rv3-avatar svg {
+      width: 26px;
+      height: 26px;
+      fill: #fff
+    }
+
+    .rv3-stars {
+      display: flex;
+      gap: 3px
+    }
+
+    .rv3-star {
+      color: #f5a623;
+      font-size: 19px;
+      line-height: 1
+    }
+
+    .rv3-text {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #fff;
+      margin: 0
+    }
+
+    .rv3-ctrl {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 16px
+    }
+
+    .rv3-arr {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      color: #7a9dbf;
+      padding: 2px 6px;
+      line-height: 1;
+      transition: color .2s
+    }
+
+    .rv3-arr:hover {
+      color: #3d6b9c
+    }
+
+    .rv3-dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #c5d8ec;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background .25s, transform .25s
+    }
+
+    .rv3-dot.on {
+      background: #0067D7;
+      transform: scale(1.3)
+    }
+
+    @media(max-width:700px) {
+      .rv3 {
+        flex-direction: column;
+        padding: 40px 16px;
+        gap: 36px
+      }
+
+      .rv3-left {
+        width: 240px;
+        height: 240px
+      }
+
+      .rv3-logo {
+        width: 54px;
+        height: 54px
+      }
+
+      .rv3-center {
+        width: 64px;
+        height: 64px
+      }
+
+      .rv3-card {
+        flex: 0 0 80%
+      }
+    }
+
+    @media(max-width:400px) {
+      .rv3-left {
+        width: 200px;
+        height: 200px
+      }
+
+      .rv3-logo {
+        width: 46px;
+        height: 46px
+      }
+
+      .rv3-center {
+        width: 56px;
+        height: 56px
+      }
+
+      .rv3-card {
+        flex: 0 0 82%
+      }
+    }
+  </style>
+
+  <h2 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">Clients and
+    reviews</h2>
+
+  <div class="rv3">
+
+    <div class="rv3-left">
+      <div class="rv3-logo"><img src="./images/client-1.svg" alt="Logo 2" /></div>
+      <div class="rv3-logo"><img src="./images/client-2.svg" alt="Logo 3" /></div>
+      <div class="rv3-logo"><img src="./images/client-3.svg" alt="Logo 1" /></div>
+      <div class="rv3-logo"><img src="./images/client-4.svg" alt="Logo 4" /></div>
+      <div class="rv3-logo"><img src="./images/client-5.svg" alt="Logo 5" /></div>
+      <div class="rv3-logo"><img src="./images/client-6.svg" alt="Logo 6" /></div>
+      <div class="rv3-logo"><img src="./images/client-7.svg" alt="Logo 7" /></div>
+      <div class="rv3-center"><img src="./images/Ralco_MasterLogo.png" alt="Brand logo" /></div>
+    </div>
+
+    <div class="rv3-right">
+      <div class="rv3-viewport" id="rv3Vp">
+        <div class="rv3-track" id="rv3Track">
+
+          <div class="rv3-card">
+            <div class="rv3-avatar"><svg viewBox="0 0 24 24">
+                <path
+                  d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+              </svg></div>
+            <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
+                class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
+            <p class="rv3-text">We have been working with Ralco for over two years. One of its kind solutions from the
+              entire team — their phenomenal commitment to quality has made them a part of several key operations across
+              our group.</p>
+          </div>
+
+          <div class="rv3-card">
+            <div class="rv3-avatar"><svg viewBox="0 0 24 24">
+                <path
+                  d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+              </svg></div>
+            <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
+                class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
+            <p class="rv3-text">Thank you for your best service. Your timely deliveries and proactive communication have
+              made a significant impact on our operations. Ralco Teams personal attention and support have been
+              invaluable
+              in ensuring everything runs smoothly.</p>
+          </div>
+
+          <div class="rv3-card">
+            <div class="rv3-avatar"><svg viewBox="0 0 24 24">
+                <path
+                  d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+              </svg></div>
+            <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
+                class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
+            <p class="rv3-text">I would like to express my satisfaction with the outstanding service provided. Ralco is
+              a
+              skilled team and an excellent partner. Their quality has consistently gone above and beyond — making them
+              truly invaluable to us.</p>
+          </div>
+
+          <div class="rv3-card">
+            <div class="rv3-avatar"><svg viewBox="0 0 24 24">
+                <path
+                  d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+              </svg></div>
+            <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
+                class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
+            <p class="rv3-text">Exceptional logistics partner. Ralco's reliability and attention to detail have
+              transformed how we manage our supply chain. Every delivery is on time and communication is always
+              excellent
+              throughout the process.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="rv3-ctrl">
+        <button class="rv3-arr" id="rv3Prev" aria-label="Previous"><svg width="24" height="25" viewBox="0 0 24 25"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_665_1018)">
+              <path
+                d="M18.4902 10.81C18.8713 10.81 19.1802 11.1189 19.1802 11.5C19.1802 11.8811 18.8713 12.19 18.4902 12.19V11.5V10.81ZM4.20233 11.9879C3.93287 11.7184 3.93287 11.2816 4.20233 11.0121L8.59346 6.62096C8.86293 6.3515 9.29981 6.3515 9.56927 6.62096C9.83873 6.89043 9.83873 7.32731 9.56927 7.59677L5.66604 11.5L9.56927 15.4032C9.83873 15.6727 9.83873 16.1096 9.56927 16.379C9.29981 16.6485 8.86293 16.6485 8.59346 16.379L4.20233 11.9879ZM18.4902 11.5V12.19H4.69024V11.5V10.81H18.4902V11.5Z"
+                fill="#06203C" />
+            </g>
+            
+          </svg>
+        </button>
+        <button class="rv3-dot on" data-i="0"></button>
+        <button class="rv3-dot" data-i="1"></button>
+        <button class="rv3-dot" data-i="2"></button>
+        <button class="rv3-dot" data-i="3"></button>
+        <button class="rv3-arr" id="rv3Next" aria-label="Next"><svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.59961 10.81C4.21853 10.81 3.90961 11.1189 3.90961 11.5C3.90961 11.8811 4.21853 12.19 4.59961 12.19V11.5V10.81ZM18.8875 11.9879C19.157 11.7184 19.157 11.2816 18.8875 11.0121L14.4964 6.62096C14.2269 6.3515 13.79 6.3515 13.5206 6.62096C13.2511 6.89043 13.2511 7.32731 13.5206 7.59677L17.4238 11.5L13.5206 15.4032C13.2511 15.6727 13.2511 16.1096 13.5206 16.379C13.79 16.6485 14.2269 16.6485 14.4964 16.379L18.8875 11.9879ZM4.59961 11.5V12.19H18.3996V11.5V10.81H4.59961V11.5Z" fill="#06203C"/>
+</svg>
+</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    (function () {
+      var track = document.getElementById('rv3Track');
+      var vp = document.getElementById('rv3Vp');
+      var dots = document.querySelectorAll('.rv3-dot');
+      var cards = document.querySelectorAll('.rv3-card');
+      var N = cards.length;
+      var cur = 0;
+      var tmr;
+
+      function getOffset(idx) {
+        var vpW = vp.offsetWidth;
+        var cardW = cards[0].offsetWidth;
+        var gap = 14;
+        var sideShow = (vpW - cardW) / 2;
+        return idx * (cardW + gap) - sideShow;
+      }
+
+      function goTo(idx, anim) {
+        cur = ((idx % N) + N) % N;
+        var off = getOffset(cur);
+        track.style.transition = anim === false ? 'none' : 'transform 0.5s cubic-bezier(0.4,0,0.2,1)';
+        track.style.transform = 'translateX(' + (-off) + 'px)';
+        dots.forEach(function (d, i) { d.classList.toggle('on', i === cur); });
+      }
+
+      function auto() { clearInterval(tmr); tmr = setInterval(function () { goTo(cur + 1, true); }, 4000); }
+
+      document.getElementById('rv3Next').addEventListener('click', function () { goTo(cur + 1, true); auto(); });
+      document.getElementById('rv3Prev').addEventListener('click', function () { goTo(cur - 1, true); auto(); });
+      dots.forEach(function (d) { d.addEventListener('click', function () { goTo(+d.dataset.i, true); auto(); }); });
+
+      var tx = 0;
+      vp.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; }, { passive: true });
+      vp.addEventListener('touchend', function (e) {
+        var dx = e.changedTouches[0].clientX - tx;
+        if (Math.abs(dx) > 40) { goTo(dx < 0 ? cur + 1 : cur - 1, true); auto(); }
+      }, { passive: true });
+
+      window.addEventListener('resize', function () { goTo(cur, false); });
+
+      goTo(0, false);
+      auto();
+    })();
+  </script>
+  <!-- new end here -->
   <!-- CTA section  -->
-  <section class="min-h-screen flex items-center justify-center px-4 pb-10">
+  <section class=" flex items-center justify-center px-4 pb-10">
     <!-- Main Container -->
     <div class="w-full max-w-6xl">
       <!-- CTA Box -->
@@ -2334,7 +2576,7 @@
   <!-- CTA section end -->
 
   <footer class="bg-[#f5f5f5] border-t border-gray-200 pt-10 pb-4 px-6 md:px-16">
-    <div class="max-w-7xl mx-auto">
+    <div class="w-custom mx-auto">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <!-- Column 1: Logo + Tagline + Social -->
         <div class="flex flex-col gap-4">
