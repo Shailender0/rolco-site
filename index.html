@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet" />
 
-  <title>ralcoindia</title>
+  <title>Ralcoindia</title>
   <style>
     body {
       font-family: "Montserrat", Courier, monospace !important;
@@ -21,6 +21,41 @@
 
     .w-custom {
       max-width: 92rem;
+    }
+
+    .animated-text {
+      display: inline-block;
+      color: #0078F9;
+      font-style: italic;
+      position: relative;
+      animation: liftMove 2.5s ease-in-out infinite;
+    }
+
+    @keyframes liftMove {
+      0% {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+
+      25% {
+        transform: translateY(-10px);
+        opacity: 0.8;
+      }
+
+      50% {
+        transform: translateY(-12px);
+        opacity: 0.8;
+      }
+
+      75% {
+        transform: translateY(-15px);
+        opacity: 0.9;
+      }
+
+      100% {
+        transform: translateY(0px);
+        opacity: 1;
+      }
     }
   </style>
   <style>
@@ -95,6 +130,10 @@
       transition:
         transform 0.2s,
         box-shadow 0.2s;
+    }
+
+    .hero-img:hover img {
+      transform: scale(1.03) translate(12px, -12px);
     }
   </style>
 
@@ -173,7 +212,7 @@
     .image-card {
       position: absolute;
       left: 0;
-      top: 50%;
+      top: 47%;
       transform: translateY(-50%) rotate(0deg);
       z-index: 2;
       /* width: 340px; */
@@ -1204,6 +1243,7 @@
       if (!isOpen) menu.classList.add("open");
     }
   </script>
+
   <!-- Hero section -->
   <section style="background-image: url(./images/Desktop\ -\ 5.png); background-size: cover;  background-position: center;  margin-top: -60px;
     padding-top: 50px;" class="relative overflow-hidden ">
@@ -1231,7 +1271,7 @@
           <!-- Heading -->
           <h1 class="text-4xl font-extrabold leading-tight text-slate-900">
             Empowering Business With Reliable IT Infrastructure
-            <span class="text-blue-600">
+            <span class="animated-text">
               Solutions
             </span>
           </h1>
@@ -1275,12 +1315,12 @@ ease-in-out alternate;" href="#"
         <div class="relative">
 
           <!-- Main Card -->
-          <div class="">
+          <div class="hero-img">
 
 
 
             <!-- Image -->
-            <img src="./images/hero-right.png" alt="IT Infrastructure" class="w-full rounded-2xl object-cover">
+            <img src="./images/hero-right.png" alt="IT Infrastructure" class="w-full rounded-2xl object-cover hero-img">
 
 
           </div>
@@ -1327,7 +1367,7 @@ ease-in-out alternate;" href="#"
   </div> -->
 
 
-   <section class="w-custom mx-auto mt-4">
+  <section class="w-custom mx-auto my-16 md:my-24">
     <div class="about-inner">
       <div class="image-card slide-from-left">
         <img src="./images/rolco-buliding.png" alt="Ralco Office Building" />
@@ -1336,7 +1376,7 @@ ease-in-out alternate;" href="#"
       <div style="background-image: url(./images/bg.png)" class="text-card slide-from-right">
         <h2>
           About
-          <span style="font-style: italic; font-family: Segoe Print" class="ralco-italic">Ralco</span>
+          <span style=" font-family: Segoe Print" class="animated-text">Ralco</span>
         </h2>
 
         <p>
@@ -1361,7 +1401,7 @@ ease-in-out alternate;" href="#"
         </p>
       </div>
     </div>
-  </section> 
+  </section>
   <script>
     const observer = new IntersectionObserver(
       (entries) => {
@@ -1384,7 +1424,7 @@ ease-in-out alternate;" href="#"
   <!-- about section end -->
   <!-- Offerings section  -->
 
-  <section class="py-16 md:py-24 overflow-hidden">
+  <section class="my-16 md:my-24 overflow-hidden">
     <div class="w-custom mx-auto px-4">
       <!-- TOP CONTENT -->
       <div class="text-center">
@@ -1394,7 +1434,7 @@ ease-in-out alternate;" href="#"
 
         <h2 class="mt-4 text-[34px] leading-[45px] sm:text-[40px] font-bold text-black">
           Built on Three Decades of IT
-          <span style="font-style: italic; font-family: Segoe Print" class="text-[#1677FF] italic font-medium">
+          <span class="animated-text">
             Excellence
           </span>
         </h2>
@@ -2220,57 +2260,58 @@ ease-in-out alternate;" href="#"
     } */
 
 
-  .rv3-logo:nth-child(1) {
-    top: 0;
-    left: 35%;
-    transform: translate(-50%, 0);
-    animation: rv3f 3.3s ease-in-out infinite 0s
-  }
+    .rv3-logo:nth-child(1) {
+      top: 0;
+      left: 35%;
+      transform: translate(-50%, 0);
+      animation: rv3f 3.3s ease-in-out infinite 0s
+    }
 
-  .rv3-logo:nth-child(2) {
-    top: 7%;
-    right: 0%;
-    animation: rv3f 3.7s ease-in-out infinite 0.4s
-  }
+    .rv3-logo:nth-child(2) {
+      top: 7%;
+      right: 0%;
+      animation: rv3f 3.7s ease-in-out infinite 0.4s
+    }
 
-  .rv3-logo:nth-child(3) {
-    top: 39%;
-    left: 71%;
-    transform: translateY(-50%);
-    animation: rv3f 3.0s ease-in-out infinite 0.8s
-  }
+    .rv3-logo:nth-child(3) {
+      top: 39%;
+      left: 71%;
+      transform: translateY(-50%);
+      animation: rv3f 3.0s ease-in-out infinite 0.8s
+    }
 
-  .rv3-logo:nth-child(4) {
-    top: 68%;
-    right: 4%;
-    animation: rv3f 3.5s ease-in-out infinite 0.2s
-  }
+    .rv3-logo:nth-child(4) {
+      top: 68%;
+      right: 4%;
+      animation: rv3f 3.5s ease-in-out infinite 0.2s
+    }
 
-  .rv3-logo:nth-child(5) {
-    bottom: -7%;
-    left: 35%;
-    transform: translate(-50%, 0);
-    animation: rv3f 3.2s ease-in-out infinite 0.6s
-  }
+    .rv3-logo:nth-child(5) {
+      bottom: -7%;
+      left: 35%;
+      transform: translate(-50%, 0);
+      animation: rv3f 3.2s ease-in-out infinite 0.6s
+    }
 
-  .rv3-logo:nth-child(6) {
-    bottom: 2%;
-    left: 4%;
-    animation: rv3f 2.9s ease-in-out infinite 1.0s
-  }
+    .rv3-logo:nth-child(6) {
+      bottom: 2%;
+      left: 4%;
+      animation: rv3f 2.9s ease-in-out infinite 1.0s
+    }
 
-  .rv3-logo:nth-child(7) {
-    top: 42%;
-    left: 0;
-    transform: translateY(-50%);
-    animation: rv3f 3.6s ease-in-out infinite 0.3s
-  }
+    .rv3-logo:nth-child(7) {
+      top: 42%;
+      left: 0;
+      transform: translateY(-50%);
+      animation: rv3f 3.6s ease-in-out infinite 0.3s
+    }
 
-  .rv3-logo:nth-child(8) {
-    top: 10%;
-    left: 0%;
-    animation: rv3f 3.1s ease-in-out infinite 0.7s
-  }
+    .rv3-logo:nth-child(8) {
+      top: 10%;
+      left: 0%;
+      animation: rv3f 3.1s ease-in-out infinite 0.7s
+    }
+
     .rv3-right {
       flex: 1;
       min-width: 260px;
@@ -2423,121 +2464,215 @@ ease-in-out alternate;" href="#"
       }
     }
   </style>
-<section class="py-16 md:py-24 w-custom mx-auto  ">
+  <section class="py-16 md:py-24 w-custom mx-auto  ">
 
-  <div class="text-center">
-    <p class="text-[#111111] text-2xl md:text-[30px] font-medium">
-      What Clients Say </p>
+    <div class="text-center">
+      <p class="text-[#111111] text-2xl md:text-[30px] font-medium">
+        What Clients Say </p>
 
-    <h2 class="mt-4 text-[34px] leading-[45px] sm:text-[40px] font-bold text-black">
-      Trusted by Teams Across <span style="font-style: italic; font-family: Segoe Print"
-        class="text-[#1677FF] italic font-medium">
-        India
-      </span>
-    </h2>
+      <h2 class="mt-4 text-[34px] leading-[45px] sm:text-[40px] font-bold text-black">
+        Trusted by Teams Across <span class="animated-text">
+          India
+        </span>
+      </h2>
 
-  </div>
-
-  <div class="rv3">
-
-    <div class="rv3-left">
-      <div class="rv3-logo"><img src="./images/client-1.svg" alt="Logo 2" /></div>
-      <div class="rv3-logo"><img src="./images/client-2.svg" alt="Logo 3" /></div>
-      <div class="rv3-logo"><img src="./images/client-3.svg" alt="Logo 1" /></div>
-      <div class="rv3-logo"><img src="./images/client-4.svg" alt="Logo 4" /></div>
-      <div class="rv3-logo"><img src="./images/client-5.svg" alt="Logo 5" /></div>
-      <div class="rv3-logo"><img src="./images/client-6.svg" alt="Logo 6" /></div>
-      <div class="rv3-logo"><img src="./images/client-7.svg" alt="Logo 7" /></div>
-      <div class="rv3-logo"><img src="./images/client-8.svg" alt="Logo 7" /></div>
-
-      <div class="rv3-center"><img src="./images/Ralco_MasterLogo.png" alt="Brand logo" /></div>
     </div>
 
-    <div class="rv3-right">
-      <div class="rv3-viewport" id="rv3Vp">
-        <div class="rv3-track" id="rv3Track">
+    <div class="rv3">
 
-          <div class="rv3-card">
-            <div class="rv3-avatar"><svg viewBox="0 0 24 24">
-                <path
-                  d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
-              </svg></div>
-            <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
-                class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
-            <p class="rv3-text">We have been working with Ralco for over two years. One of its kind solutions from the
-              entire team — their phenomenal commitment to quality has made them a part of several key operations across
-              our group.</p>
+      <div class="rv3-left">
+        <div class="rv3-logo"><img src="./images/client-1.svg" alt="Logo 2" /></div>
+        <div class="rv3-logo"><img src="./images/client-2.svg" alt="Logo 3" /></div>
+        <div class="rv3-logo"><img src="./images/client-3.svg" alt="Logo 1" /></div>
+        <div class="rv3-logo"><img src="./images/client-4.svg" alt="Logo 4" /></div>
+        <div class="rv3-logo"><img src="./images/client-5.svg" alt="Logo 5" /></div>
+        <div class="rv3-logo"><img src="./images/client-6.svg" alt="Logo 6" /></div>
+        <div class="rv3-logo"><img src="./images/client-7.svg" alt="Logo 7" /></div>
+        <div class="rv3-logo"><img src="./images/client-8.svg" alt="Logo 7" /></div>
+
+        <div class="rv3-center"><img src="./images/Ralco_MasterLogo.png" alt="Brand logo" /></div>
+      </div>
+
+      <div class="rv3-right">
+        <div class="rv3-viewport" id="rv3Vp">
+          <div class="rv3-track" id="rv3Track">
+
+            <div class="rv3-card">
+              <div class="rv3-avatar"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+                </svg></div>
+              <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
+                  class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
+              <p class="rv3-text">Ralco's timely deliveries and proactive communication have made a significant impact
+                on
+                our operations. Truly invaluable partners.</p>
+            </div>
+
+            <div class="rv3-card">
+              <div class="rv3-avatar"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+                </svg></div>
+              <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
+                  class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
+              <p class="rv3-text">Ralco's engineers consistently go above and beyond. Outstanding troubleshooting skills
+                and excellent service every single time. Highly grateful.</p>
+            </div>
+
+            <div class="rv3-card">
+              <div class="rv3-avatar"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+                </svg></div>
+              <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
+                  class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
+              <p class="rv3-text">From quote to delivery, Ralco handled everything with due diligence and prompt
+                responses. Our sincere thanks to Team Ralco!</p>
+            </div>
+
+            <div class="rv3-card">
+              <div class="rv3-avatar"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+                </svg></div>
+              <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
+                  class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
+              <p class="rv3-text">Two years with Ralco Synergy — consistently exceptional. Right equipment, on time,
+                every
+                time. A partnership we truly value.</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="rv3-card">
+              <div class="rv3-avatar"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+                </svg></div>
+              <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
+                  class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
+              <p class="rv3-text">Ralco's flexible rental solutions helped us scale fast without heavy capital
+                investment.
+                Reliable, professional, and always committed to excellence.</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="rv3-card">
+              <div class="rv3-avatar"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+                </svg></div>
+              <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
+                  class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
+              <p class="rv3-text">Laptops, networking gear, and AV delivered seamlessly during our expansion. Ralco is a
+                dependable IT partner we count on.</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="rv3-card">
+              <div class="rv3-avatar"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+                </svg></div>
+              <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
+                  class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
+              <p class="rv3-text">Prompt communication, meticulous paperwork, on-time deliveries — Ralco Synergy is our
+                preferred IT infrastructure partner. Highly recommended without hesitation.</p>
+            </div>
+            <div class="rv3-card">
+              <div class="rv3-avatar"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+                </svg></div>
+              <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
+                  class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
+              <p class="rv3-text">Ralco's rental model gave us the flexibility we needed. Top-notch equipment and
+                support
+                engineers always just a call away.</p>
+            </div>
+            <div class="rv3-card">
+              <div class="rv3-avatar"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+                </svg></div>
+              <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
+                  class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
+              <p class="rv3-text">Tight deadline, large requirement — Ralco delivered every unit perfectly on time.
+                Smooth
+                process from quotation to final delivery.</p>
+            </div>
+
+            <div class="rv3-card">
+              <div class="rv3-avatar"><svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+                </svg></div>
+              <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
+                  class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
+              <p class="rv3-text">Ralco tracked every shipment and kept us informed at each step. Rarely do you find a
+                vendor this committed.</p>
+            </div>
           </div>
+        </div>
 
-          <div class="rv3-card">
-            <div class="rv3-avatar"><svg viewBox="0 0 24 24">
+        <div class="rv3-ctrl">
+          <button class="rv3-arr" id="rv3Prev" aria-label="Previous"><svg width="24" height="25" viewBox="0 0 24 25"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g filter="url(#filter0_d_665_1018)">
                 <path
-                  d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
-              </svg></div>
-            <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
-                class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
-            <p class="rv3-text">Thank you for your best service. Your timely deliveries and proactive communication have
-              made a significant impact on our operations. Ralco Teams personal attention and support have been
-              invaluable
-              in ensuring everything runs smoothly.</p>
-          </div>
+                  d="M18.4902 10.81C18.8713 10.81 19.1802 11.1189 19.1802 11.5C19.1802 11.8811 18.8713 12.19 18.4902 12.19V11.5V10.81ZM4.20233 11.9879C3.93287 11.7184 3.93287 11.2816 4.20233 11.0121L8.59346 6.62096C8.86293 6.3515 9.29981 6.3515 9.56927 6.62096C9.83873 6.89043 9.83873 7.32731 9.56927 7.59677L5.66604 11.5L9.56927 15.4032C9.83873 15.6727 9.83873 16.1096 9.56927 16.379C9.29981 16.6485 8.86293 16.6485 8.59346 16.379L4.20233 11.9879ZM18.4902 11.5V12.19H4.69024V11.5V10.81H18.4902V11.5Z"
+                  fill="#06203C" />
+              </g>
 
-          <div class="rv3-card">
-            <div class="rv3-avatar"><svg viewBox="0 0 24 24">
-                <path
-                  d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
-              </svg></div>
-            <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
-                class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
-            <p class="rv3-text">I would like to express my satisfaction with the outstanding service provided. Ralco is
-              a
-              skilled team and an excellent partner. Their quality has consistently gone above and beyond — making them
-              truly invaluable to us.</p>
-          </div>
-
-          <div class="rv3-card">
-            <div class="rv3-avatar"><svg viewBox="0 0 24 24">
-                <path
-                  d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
-              </svg></div>
-            <div class="rv3-stars"><span class="rv3-star">★</span><span class="rv3-star">★</span><span
-                class="rv3-star">★</span><span class="rv3-star">★</span><span class="rv3-star">★</span></div>
-            <p class="rv3-text">Exceptional logistics partner. Ralco's reliability and attention to detail have
-              transformed how we manage our supply chain. Every delivery is on time and communication is always
-              excellent
-              throughout the process.</p>
-          </div>
-
+            </svg>
+          </button>
+          <button class="rv3-dot on" data-i="0"></button>
+          <button class="rv3-dot" data-i="1"></button>
+          <button class="rv3-dot" data-i="2"></button>
+          <button class="rv3-dot" data-i="3"></button>
+          <button class="rv3-arr" id="rv3Next" aria-label="Next"><svg width="23" height="23" viewBox="0 0 23 23"
+              fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M4.59961 10.81C4.21853 10.81 3.90961 11.1189 3.90961 11.5C3.90961 11.8811 4.21853 12.19 4.59961 12.19V11.5V10.81ZM18.8875 11.9879C19.157 11.7184 19.157 11.2816 18.8875 11.0121L14.4964 6.62096C14.2269 6.3515 13.79 6.3515 13.5206 6.62096C13.2511 6.89043 13.2511 7.32731 13.5206 7.59677L17.4238 11.5L13.5206 15.4032C13.2511 15.6727 13.2511 16.1096 13.5206 16.379C13.79 16.6485 14.2269 16.6485 14.4964 16.379L18.8875 11.9879ZM4.59961 11.5V12.19H18.3996V11.5V10.81H4.59961V11.5Z"
+                fill="#06203C" />
+            </svg>
+          </button>
         </div>
       </div>
 
-      <div class="rv3-ctrl">
-        <button class="rv3-arr" id="rv3Prev" aria-label="Previous"><svg width="24" height="25" viewBox="0 0 24 25"
-            fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_d_665_1018)">
-              <path
-                d="M18.4902 10.81C18.8713 10.81 19.1802 11.1189 19.1802 11.5C19.1802 11.8811 18.8713 12.19 18.4902 12.19V11.5V10.81ZM4.20233 11.9879C3.93287 11.7184 3.93287 11.2816 4.20233 11.0121L8.59346 6.62096C8.86293 6.3515 9.29981 6.3515 9.56927 6.62096C9.83873 6.89043 9.83873 7.32731 9.56927 7.59677L5.66604 11.5L9.56927 15.4032C9.83873 15.6727 9.83873 16.1096 9.56927 16.379C9.29981 16.6485 8.86293 16.6485 8.59346 16.379L4.20233 11.9879ZM18.4902 11.5V12.19H4.69024V11.5V10.81H18.4902V11.5Z"
-                fill="#06203C" />
-            </g>
-
-          </svg>
-        </button>
-        <button class="rv3-dot on" data-i="0"></button>
-        <button class="rv3-dot" data-i="1"></button>
-        <button class="rv3-dot" data-i="2"></button>
-        <button class="rv3-dot" data-i="3"></button>
-        <button class="rv3-arr" id="rv3Next" aria-label="Next"><svg width="23" height="23" viewBox="0 0 23 23"
-            fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M4.59961 10.81C4.21853 10.81 3.90961 11.1189 3.90961 11.5C3.90961 11.8811 4.21853 12.19 4.59961 12.19V11.5V10.81ZM18.8875 11.9879C19.157 11.7184 19.157 11.2816 18.8875 11.0121L14.4964 6.62096C14.2269 6.3515 13.79 6.3515 13.5206 6.62096C13.2511 6.89043 13.2511 7.32731 13.5206 7.59677L17.4238 11.5L13.5206 15.4032C13.2511 15.6727 13.2511 16.1096 13.5206 16.379C13.79 16.6485 14.2269 16.6485 14.4964 16.379L18.8875 11.9879ZM4.59961 11.5V12.19H18.3996V11.5V10.81H4.59961V11.5Z"
-              fill="#06203C" />
-          </svg>
-        </button>
-      </div>
     </div>
-
-  </div>
-</section>
+  </section>
 
   <script>
     (function () {
